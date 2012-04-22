@@ -33,7 +33,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/lenovo/thinkpadtablet/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_thinkpadtablet
+PRODUCT_NAME := cm_thinkpadtablet
 PRODUCT_DEVICE := thinkpadtablet
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full CM9 on ThinkPad Tablet
+PRODUCT_BRAND := Lenovo
+PRODUCT_MANUFACTORER := Lenovo
+PRODUCT_MODEL := ThinkPad Tablet

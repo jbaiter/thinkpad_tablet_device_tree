@@ -15,6 +15,7 @@ TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_BOOTLOADER_BOARD_NAME := ventana
 
+TARGET_KERNEL_CONFIG := tegra_cm9_defconfig
 TARGET_BOARD_INFO_FILE := device/lenovo/thinkpadtablet/board-info.txt
 
 TARGET_NO_BOOTLOADER := true
@@ -48,15 +49,23 @@ BOARD_USES_ALSA_AUDIO := false
 #TARGET_PROVIDES_LIBAUDIO := true
 BUILD_WITH_ALSA_UTILS := false
 
-TARGET_OTA_ASSERT_DEVICE := thinkpadtablet,ventana
+TARGET_OTA_ASSERT_DEVICE := thinkpadtablet,ventana,ventana32,ventana64
 
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/lenovo/thinkpadtablet/prebuild/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/lenovo/thinkpadtablet/proprietary/lib/egl/egl.cfg
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 805306368
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 13249806336
+
+# Set the following sizes if you want to keep your userdata after a restore
+#
+# 16GB Version
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 13249806336
+# 32GB Version
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 29502734336
+# 64GB Version
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 61513662464
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Indicate that the board has an Internal SD Card

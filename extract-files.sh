@@ -10,6 +10,3 @@ for FILE in `cat proprietary-files.txt`; do
     fi
     adb pull /system/$FILE $BASE/$FILE
 done
-
-./setup-makefiles.sh
-
