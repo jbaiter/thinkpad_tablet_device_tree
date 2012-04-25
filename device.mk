@@ -34,13 +34,15 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_ID=IML74K
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version = 131072 \
+    ro.opengles.version=131072 \
     dalvik.vm.heapstartsize=5m \
     dalvik.vm.heapgrowthlimit=48m \
     dalvik.vm.heapsize=256m \
     dalvik.vm.dexopt-flags=m=y \
     wifi.interface=wlan0 \
-    ro.sf.lcd_density=150 
+    ro.sf.lcd_density=150 \
+    rild.libpath=/system/lib/libmbm-ril.so \
+    rild.libargs=-d/dev/ttyACM1
 
 # Get a proper init file
 PRODUCT_COPY_FILES += \
@@ -54,14 +56,8 @@ PRODUCT_COPY_FILES += \
 #device/lenovo/thinkpadtablet/ramdisk/init:root/init 
 # Set default USB interface
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#   persist.sys.usb.config=mtp
+#	persist.sys.usb.config=mtp
     
-# Some files for 3G
-#PRODUCT_COPY_FILES += \
-#    device/lenovo/thinkpadtablet/prebuild/etc/ppp/ip-up:system/etc/ppp/ip-up \
-#    device/lenovo/thinkpadtablet/prebuild/etc/ppp/ip-down:system/etc/ppp/ip-down 
-
-
 # Place permission files
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -77,20 +73,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/base/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml\
     device/lenovo/thinkpadtablet/configfiles/etc/permissions/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
-
-# Wirless files
-PRODUCT_COPY_FILES += \
-    device/lenovo/thinkpadtablet/proprietary/vendor/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-    device/lenovo/thinkpadtablet/proprietary/vendor/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin \
-    device/lenovo/thinkpadtablet/proprietary/etc/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/0/uqcn.mbn:system/vendor/sierraImg/0/uqcn.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/1/amss.mbn:system/vendor/sierraImg/1/amss.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/1/uqcn.mbn:system/vendor/sierraImg/1/uqcn.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/2/uqcn.mbn:system/vendor/sierraImg/2/uqcn.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/3/amss.mbn:system/vendor/sierraImg/3/amss.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/3/uqcn.mbn:system/vendor/sierraImg/3/uqcn.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/6/amss.mbn:system/vendor/sierraImg/6/amss.mbn \
-    device/lenovo/thinkpadtablet/proprietary/vendor/sierraImg/6/uqcn.mbn:system/vendor/sierraImg/6/uqcn.mbn
 
 $(call inherit-product-if-exists, device/lenovo/thinkpadtablet/proprietary/thinkpadtablet-vendor.mk)
 $(call inherit-product-if-exists, device/lenovo/thinkpadtablet/configfiles/thinkpadtablet-configs.mk)
@@ -117,7 +99,11 @@ PRODUCT_PACKAGES += \
     alsa_ctl \
     alsa_amixer \
     Trebuchet \
-    ToggleBar
+    mbmd \
+    gps.$(TARGET_PRODUCT) \
+    MbmService \
+    libmbm-ril \
+    Stk
 
 PRODUCT_CHARACTERISTICS := tablet
 
@@ -126,7 +112,7 @@ PRODUCT_LOCALES += hdpi
 
 # VOLD
 PRODUCT_COPY_FILES += \
-    device/lenovo/thinkpadtablet/configfiles/etc/vold.fstab:system/etc/vold.fstab
+    device/lenovo/thinkpadtablet/proprietary/etc/vold.fstab:system/etc/vold.fstab
 
 # APNs
 PRODUCT_COPY_FILES += \

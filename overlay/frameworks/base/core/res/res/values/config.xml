@@ -20,7 +20,7 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <string name="config_datause_iface">wlan0</string>
+    <string name="config_datause_iface">rmnet0</string>
 
     <bool name="config_allowAllRotations">true</bool>
 
@@ -72,4 +72,12 @@
          causing scroll startup to jump. -->
     <dimen name="config_viewConfigurationTouchSlop">12dp</dimen>
 
+    <string-array translatable="false" name="networkAttributes">
+        <item>"wifi,1,1,1,-1,true"</item>
+        <item>"mobile,0,0,0,-1,true"</item>
+        <item>"mobile_mms,2,0,2,60000,true"</item>
+        <item>"mobile_supl,3,0,2,60000,true"</item>
+        <item>"mobile_dun,4,0,3,60000,true"</item>
+        <item>"mobile_hipri,5,0,3,60000,true"</item>
+    </string-array>
 </resources>
