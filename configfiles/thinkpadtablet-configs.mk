@@ -17,19 +17,12 @@ PRODUCT_COPY_FILES += \
     device/lenovo/thinkpadtablet/proprietary/bin/akmd8975:system/bin/akmd8975 \
     device/lenovo/thinkpadtablet/proprietary/bin/brcm_patchram_plus:system/bin/brcm_patchram_plus \
     device/lenovo/thinkpadtablet/proprietary/bin/glgps_nvidiaTegra2android:system/bin/glgps_nvidiaTegra2android \
-    device/lenovo/thinkpadtablet/proprietary/bin/hostapd:system/bin/hostapd \
-    device/lenovo/thinkpadtablet/proprietary/bin/hostapd_cli:system/bin/hostapd_cli \
-    device/lenovo/thinkpadtablet/proprietary/bin/hostapd_wps:system/bin/hostapd_wps \
     device/lenovo/thinkpadtablet/proprietary/bin/init.dhcpcd:system/bin/init.dhcpcd \
-    device/lenovo/thinkpadtablet/proprietary/bin/nvdmmultidisplay:system/bin/nvdmmultidisplay \
     device/lenovo/thinkpadtablet/proprietary/bin/nv_hciattach:system/bin/nv_hciattach \
     device/lenovo/thinkpadtablet/proprietary/bin/nvrm_daemon:system/bin/nvrm_daemon \
     device/lenovo/thinkpadtablet/proprietary/bin/nvtest:system/bin/nvtest \
     device/lenovo/thinkpadtablet/proprietary/bin/omx_tests:system/bin/omx_tests \
     device/lenovo/thinkpadtablet/proprietary/bin/tegrastats:system/bin/tegrastats \
-    device/lenovo/thinkpadtablet/proprietary/bin/tfctrl:system/bin/tfctrl \
-    device/lenovo/thinkpadtablet/proprietary/bin/tf_daemon:system/bin/tf_daemon \
-    device/lenovo/thinkpadtablet/proprietary/bin/wmiconfig:system/bin/wmiconfig \
     device/lenovo/thinkpadtablet/proprietary/bin/wwanloader:system/bin/wwanloader \
     device/lenovo/thinkpadtablet/proprietary/bin/TrackLibApp:system/bin/TrackLibApp
 
