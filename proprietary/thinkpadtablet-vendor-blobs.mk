@@ -17,19 +17,11 @@ PRODUCT_COPY_FILES += \
     device/lenovo/thinkpadtablet/proprietary/bin/akmd8975:system/bin/akmd8975 \
     device/lenovo/thinkpadtablet/proprietary/bin/brcm_patchram_plus:system/bin/brcm_patchram_plus \
     device/lenovo/thinkpadtablet/proprietary/bin/glgps_nvidiaTegra2android:system/bin/glgps_nvidiaTegra2android \
-    device/lenovo/thinkpadtablet/proprietary/bin/hostapd:system/bin/hostapd \
-    device/lenovo/thinkpadtablet/proprietary/bin/hostapd_cli:system/bin/hostapd_cli \
-    device/lenovo/thinkpadtablet/proprietary/bin/hostapd_wps:system/bin/hostapd_wps \
-    device/lenovo/thinkpadtablet/proprietary/bin/init.dhcpcd:system/bin/init.dhcpcd \
-    device/lenovo/thinkpadtablet/proprietary/bin/nvdmmultidisplay:system/bin/nvdmmultidisplay \
     device/lenovo/thinkpadtablet/proprietary/bin/nv_hciattach:system/bin/nv_hciattach \
     device/lenovo/thinkpadtablet/proprietary/bin/nvrm_daemon:system/bin/nvrm_daemon \
     device/lenovo/thinkpadtablet/proprietary/bin/nvtest:system/bin/nvtest \
     device/lenovo/thinkpadtablet/proprietary/bin/omx_tests:system/bin/omx_tests \
     device/lenovo/thinkpadtablet/proprietary/bin/tegrastats:system/bin/tegrastats \
-    device/lenovo/thinkpadtablet/proprietary/bin/tfctrl:system/bin/tfctrl \
-    device/lenovo/thinkpadtablet/proprietary/bin/tf_daemon:system/bin/tf_daemon \
-    device/lenovo/thinkpadtablet/proprietary/bin/wmiconfig:system/bin/wmiconfig \
     device/lenovo/thinkpadtablet/proprietary/bin/wwanloader:system/bin/wwanloader \
     device/lenovo/thinkpadtablet/proprietary/bin/TrackLibApp:system/bin/TrackLibApp 
 
@@ -76,7 +68,6 @@ PRODUCT_COPY_FILES += \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvomx.so:system/lib/libnvomx.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvos.so:system/lib/libnvos.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libStylusCore.so:system/lib/libStylusCore.so \
-    device/lenovo/thinkpadtablet/proprietary/lib/libarcsoft_source.so:system/lib/libarcsoft_source.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libwwanloader.so:system/lib/libwwanloader.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvsm.so:system/lib/libnvsm.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvmm_msaudio.so:system/lib/libnvmm_msaudio.so \
@@ -97,7 +88,6 @@ PRODUCT_COPY_FILES += \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvmm_image.so:system/lib/libnvmm_image.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvmm_writer.so:system/lib/libnvmm_writer.so \
-    device/lenovo/thinkpadtablet/proprietary/lib/libarcsoft_demux.so:system/lib/libarcsoft_demux.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvddk_2d_v2.so:system/lib/libnvddk_2d_v2.so \
     device/lenovo/thinkpadtablet/proprietary/lib/libnvwinsys.so:system/lib/libnvwinsys.so \
     device/lenovo/thinkpadtablet/proprietary/lib/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
